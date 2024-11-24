@@ -23,15 +23,54 @@
   }
   
   .aboutBottom p {
-    width: 1200px;
+    width: auto
   }
   
   .about .aboutBottom h1 {
     font-weight: 400;
     font-size: 70px;
-    color: black;
     height: 30px;
     display: flex;
     justify-content: center;
     transform: translateY(-40px);
   }
+
+  @media only screen and (max-width: 650px) {
+    .about {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      padding: 20px;
+      width: auto;
+    }
+  
+    .aboutBottom {
+      margin-left: 0px;
+      border-radius: 10px;
+      padding: 20px;
+      width:auto; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #121619;
+      color: white;
+    }
+  
+    .aboutBottom h1 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem); 
+      margin: 0; 
+      color: white;
+    }
+  
+    .aboutBottom p {
+      font-size: clamp(1rem, 3vw, 1.25rem); 
+      text-align: center;
+      line-height: 1.5; 
+      word-wrap: break-word; 
+      overflow-wrap: break-word;
+      margin: 0; 
+      padding: 10px 0; 
+    }
+  }
+  
